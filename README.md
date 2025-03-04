@@ -88,7 +88,7 @@ Para obter o código-fonte do projeto, execute o seguinte comando no terminal:
 git clone https://github.com/zinhocoder/Busca-CEPs.git
 
 # Acesse a pasta do projeto
-cd busca-cep
+cd Busca-CEPs
 ```
 
 ## 📦 Instalando Dependências
