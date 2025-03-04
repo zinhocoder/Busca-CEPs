@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background-color: #f8fafc;
+    @apply text-foreground antialiased;
+    background-image: linear-gradient(to bottom right, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .elegant-card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+    @apply shadow-xl shadow-black/[0.03];
+    @apply rounded-2xl;
+    @apply hover:shadow-2xl hover:shadow-black/[0.05];
+    @apply transition-all duration-300;
+  }
+
+  .elegant-panel {
+    @apply bg-white/60 backdrop-blur-xl;
+    @apply border border-white/20;
+    @apply shadow-xl shadow-black/[0.03];
+    @apply rounded-3xl overflow-hidden;
+    @apply hover:shadow-2xl hover:shadow-black/[0.05];
+    @apply transition-all duration-300;
+  }
+
+  .elegant-input {
+    @apply h-12 px-4;
+    @apply bg-white/60 backdrop-blur-sm;
+    @apply border-0 rounded-xl;
+    @apply shadow-sm shadow-black/[0.03];
+    @apply ring-1 ring-black/[0.04];
+    @apply transition-all duration-200;
+    @apply placeholder:text-gray-400 text-gray-600;
+    @apply focus:ring-2 focus:ring-primary/20;
+    @apply focus:shadow-lg focus:shadow-primary/[0.08];
+  }
+
+  .elegant-input-lg {
+    @apply h-14 px-5 text-lg;
+    @apply bg-white/60 backdrop-blur-sm;
+    @apply border-0 rounded-2xl;
+    @apply shadow-sm shadow-black/[0.03];
+    @apply ring-1 ring-black/[0.04];
+    @apply transition-all duration-200;
+    @apply placeholder:text-gray-400 text-gray-600;
+    @apply focus:ring-2 focus:ring-primary/20;
+    @apply focus:shadow-lg focus:shadow-primary/[0.08];
+  }
+
+  .elegant-button {
+    @apply bg-primary text-white;
+    @apply rounded-xl px-6 py-3;
+    @apply shadow-lg shadow-primary/25;
+    @apply hover:shadow-xl hover:shadow-primary/30;
+    @apply hover:-translate-y-0.5 active:translate-y-0;
+    @apply transition-all duration-200;
+    @apply disabled:opacity-50;
+  }
+
+  .elegant-button-outline {
+    @apply bg-white/60 backdrop-blur-sm;
+    @apply text-gray-600;
+    @apply border border-gray-200/50;
+    @apply rounded-xl px-6 py-3;
+    @apply shadow-sm hover:shadow-md hover:bg-white;
+    @apply transition-all duration-200;
+    @apply disabled:opacity-50;
+  }
+
+  .elegant-title {
+    @apply text-4xl font-bold;
+    @apply bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-gray-800 to-gray-600;
+  }
+
+  .elegant-subtitle {
+    @apply text-lg text-gray-500 font-medium;
+  }
+
+  .elegant-badge {
+    @apply inline-flex items-center;
+    @apply px-2.5 py-1 rounded-lg;
+    @apply text-xs font-medium;
+    @apply bg-primary/10 text-primary;
+  }
+
+  .elegant-badge-outline {
+    @apply inline-flex items-center;
+    @apply px-2.5 py-1 rounded-lg;
+    @apply text-xs font-medium;
+    @apply border border-gray-200/50;
+    @apply text-gray-600 bg-white/60;
+    @apply backdrop-blur-sm;
+  }
+
+  .elegant-table {
+    @apply w-full;
+  }
+
+  .elegant-table th {
+    @apply px-4 py-3;
+    @apply text-left text-xs font-medium;
+    @apply text-gray-500 uppercase tracking-wider;
+    @apply bg-gray-50/50 backdrop-blur-sm;
+  }
+
+  .elegant-table td {
+    @apply px-4 py-3;
+    @apply text-sm text-gray-600;
+    @apply border-t border-gray-100;
+  }
+
+  .elegant-table tr:hover td {
+    @apply bg-gray-50/50;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
