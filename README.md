@@ -85,7 +85,7 @@ Para obter o código-fonte do projeto, execute o seguinte comando no terminal:
 
 ```sh
 # Clone o repositório
-git clone https://github.com/seu-usuario/busca-cep.git
+git clone https://github.com/zinhocoder/Busca-CEPs.git
 
 # Acesse a pasta do projeto
 cd busca-cep
