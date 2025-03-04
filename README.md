@@ -68,3 +68,109 @@ Uma aplicação elegante e moderna para buscar, visualizar e gerenciar endereço
 - Visualize as entradas em cache clicando em "Cache de CEPs"
 - Limpe o cache clicando em "Limpar Cache"
 
+### Link do deploy :
+- https://busca-ce-ps.vercel.app/
+
+# 📥 Instalação e Uso do Projeto
+
+## 🚀 Pré-requisitos
+Antes de começar, certifique-se de que possui os seguintes requisitos instalados:
+
+- **Node.js** (versão 16 ou superior)
+- **npm** ou **yarn** (gerenciador de pacotes do Node.js)
+- **Git** (para clonar o repositório)
+
+## 📌 Clonando o Repositório
+Para obter o código-fonte do projeto, execute o seguinte comando no terminal:
+
+```sh
+# Clone o repositório
+git clone https://github.com/seu-usuario/busca-cep.git
+
+# Acesse a pasta do projeto
+cd busca-cep
+```
+
+## 📦 Instalando Dependências
+Após clonar o projeto, instale as dependências necessárias com um dos seguintes comandos:
+
+```sh
+# Usando npm
+npm install
+
+# Ou usando yarn
+yarn install
+```
+
+## ▶️ Executando o Projeto
+Com as dependências instaladas, inicie o servidor de desenvolvimento:
+
+```sh
+# Usando npm
+npm run dev
+
+# Ou usando yarn
+yarn dev
+```
+
+O projeto estará disponível no navegador em: **http://localhost:3000**
+
+## 🏗️ Build para Produção
+Para gerar os arquivos otimizados para produção, utilize o seguinte comando:
+
+```sh
+# Usando npm
+npm run build
+
+# Ou usando yarn
+yarn build
+```
+
+Após a build, você pode executar o projeto em modo de produção com:
+
+```sh
+npm run start
+# ou
+yarn start
+```
+
+## 🛠️ Configuração Adicional
+Se necessário, crie um arquivo **.env.local** na raiz do projeto para definir variáveis de ambiente. Por exemplo:
+
+```env
+NEXT_PUBLIC_API_URL=https://viacep.com.br/ws/
+```
+
+## 📝 Estrutura do Projeto
+```plaintext
+📦 busca-cep
+├── 📁 public         # Arquivos estáticos
+├── 📁 src
+│   ├── 📁 components # Componentes reutilizáveis
+│   ├── 📁 pages      # Páginas do Next.js
+│   ├── 📁 styles     # Estilos com TailwindCSS
+│   ├── 📁 utils      # Funções auxiliares
+├── .gitignore        # Arquivos ignorados pelo Git
+├── package.json      # Configuração do projeto e dependências
+├── README.md         # Documentação principal
+```
+
+## 🔄 Atualizando o Projeto
+Caso já tenha o repositório clonado e queira obter as últimas atualizações, execute:
+
+```sh
+# Navegue até a pasta do projeto
+cd busca-cep
+
+# Baixe as atualizações mais recentes
+git pull origin main
+```
+
+## 🛑 Como Parar a Aplicação
+Se precisar interromper a execução do servidor de desenvolvimento, pressione **Ctrl + C** no terminal onde ele está rodando.
+
+---
+
+Agora você está pronto para usar o projeto! 🚀
+
+
